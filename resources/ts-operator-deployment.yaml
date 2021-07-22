@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: '4'
+  labels:
+    app: ts-operator
+    app.kubernetes.io/component: ts-operator
+    app.kubernetes.io/instance: ts-operator
+  name: ts-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      deployment: ts-operator
+  template:
+    metadata:
+      labels:
+        deployment: ts-operator
+    spec:
+      containers:
+        - env:
+            - name: DEV_MODE
+              value: 'false'
+          image: ' '
+          imagePullPolicy: IfNotPresent
+          name: ts-operator
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+      serviceAccount: ts-operator

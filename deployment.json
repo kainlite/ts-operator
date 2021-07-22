@@ -1,0 +1,31 @@
+{
+  "apiVersion": "apps/v1",
+  "kind": "Deployment",
+  "metadata": {
+    "name": "mycustomresource"
+  },
+  "spec": {
+    "replicas": 1,
+    "selector": {
+      "matchLabels": {
+        "app": "mycustomresource"
+      }
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "mycustomresource"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "command": ["sleep", "3600"],
+            "image": "busybox:latest",
+            "name": "busybox",
+          }
+        ]
+      }
+    }
+  }
+}
