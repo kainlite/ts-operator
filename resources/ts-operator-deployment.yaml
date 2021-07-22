@@ -22,7 +22,7 @@ spec:
         - env:
             - name: DEV_MODE
               value: 'false'
-          image: ' '
+          image: ghcr.io/kainlite/ts-operator
           imagePullPolicy: IfNotPresent
           name: ts-operator
           ports:

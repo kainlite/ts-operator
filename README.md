@@ -11,7 +11,7 @@ kind create cluster
 Start by creating all the resources:
 
 ```bash
-kubectl apply -k resources
+kustomize build resources | kubectl apply -f -
 ```
 
 This will create the `ts-operator` namespace and populate it with ImageStreams, a BuildConfig and a Deployment running the operator.
@@ -45,5 +45,5 @@ Replace the size value from 1 to 2, then save. You will see the size of your dep
 You can delete all the resources created earlier by running:
 
 ```bash
-kubectl delete -k resources
+kustomize build resources | kubectl delete -f -
 ```

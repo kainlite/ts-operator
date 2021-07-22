@@ -1,9 +1,10 @@
 kind: CustomResourceDefinition
 apiVersion: apiextensions.k8s.io/v1
 metadata:
-  name: mycustomresource.custom.example.com
+  name: mycustomresources.custom.example.com
 spec:
   group: custom.example.com
+  scope: Namespaced
   names:
     plural: mycustomresources
     singular: mycustomresource
@@ -11,7 +12,6 @@ spec:
       - mcr
     kind: MyCustomResource
     listKind: MyCustomResourceList
-  scope: Namespaced
   versions:
     - name: v1
       served: true
