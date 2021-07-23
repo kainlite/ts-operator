@@ -5,6 +5,7 @@ commonLabels:
   app: ts-operator
 resources:
   - ts-operator-namespace.yaml
+  - ts-operator-workers-namespace.yaml
   - ts-operator-sa.yaml
   - mycustomresource-crd.yaml
   - mycustomresource-editor-role.yaml
