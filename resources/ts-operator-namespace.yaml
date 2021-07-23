@@ -1,4 +1,10 @@
+---
 apiVersion: v1
 kind: Namespace
 metadata:
   name: ts-operator
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: workers

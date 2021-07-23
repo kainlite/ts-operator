@@ -2,5 +2,6 @@ apiVersion: custom.example.com/v1
 kind: MyCustomResource
 metadata:
   name: mycustomresource-sample
+  namespace: workers
 spec:
-  size: 1
+  size: 3
